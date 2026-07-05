@@ -1,4 +1,4 @@
-fetch("https://personal-portfolio-website-s8yu.onrender.com/projects")
+fetch("https://manasa-portfolio-website.onrender.com/projects")
 .then((response) => response.json())
 .then((data) => {
 
@@ -54,7 +54,7 @@ contactForm.addEventListener("submit", function (e) {
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
 
-    fetch("https://personal-portfolio-website-s8yu.onrender.com/contact", {
+    fetch("https://manasa-portfolio-website.onrender.com/contact", {
 
         method: "POST",
 
