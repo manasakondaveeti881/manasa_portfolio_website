@@ -53,7 +53,12 @@ app.get("/check-contacts", (req, res) => {
         res.json(result);
     });
 });
-
+app.get("/all-contacts", (req, res) => {
+    db.query("SELECT * FROM contacts", (err, result) => {
+        if (err) return res.json(err);
+        res.json(result);
+    });
+});
 // Save contact message
 app.post("/contact", (req, res) => {
 
