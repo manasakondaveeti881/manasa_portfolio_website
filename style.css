@@ -1,0 +1,347 @@
+html{
+    scroll-behavior:smooth;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+/* Navigation */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#1e293b;
+}
+
+nav h2{
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+/* Hero */
+
+.hero{
+    min-height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero img{
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    border:6px solid #3bbcff;
+
+    box-shadow:0 0 30px #3bbcff;
+
+    transition:0.4s;
+
+}
+.hero img:hover{
+
+    transform:scale(1.05);
+
+}
+
+.hero h1{
+    margin-top:20px;
+    font-size:45px;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.hero h3{
+    margin:15px;
+    color:#cbd5e1;
+}
+
+.hero p{
+    margin-bottom:30px;
+}
+.social{
+
+    margin:25px;
+
+}
+
+.social a{
+
+    color:#3bbcff;
+
+    font-size:30px;
+
+    margin:15px;
+
+    transition:.3s;
+
+}
+
+.social a:hover{
+
+    color:white;
+
+    transform:scale(1.3);
+
+}
+button{
+    padding:15px 30px;
+    margin:10px;
+    border:none;
+    background:#38bdf8;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button{
+
+    transition:0.3s;
+
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+
+}
+
+section{
+    padding:70px 10%;
+}
+
+.about,
+.skills,
+.projects,
+.contact{
+    text-align:center;
+}
+
+.about p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+.education{
+    text-align:center;
+}
+
+.education-card{
+    background:#1e293b;
+    width:80%;
+    margin:25px auto;
+    padding:25px;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.education-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 20px rgba(56,189,248,.3);
+}
+
+.education-card h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.education-card p{
+    margin:8px 0;
+}
+
+.skill{
+    margin:20px auto;
+    width:70%;
+}
+
+.bar{
+    width:100%;
+    background:#ddd;
+    height:12px;
+    border-radius:20px;
+}
+
+.bar div{
+    height:12px;
+    background:#38bdf8;
+    border-radius:20px;
+    animation:load 2s;
+}
+
+@keyframes load{
+
+from{
+    width:0;
+}
+
+}
+
+.html{width:95%;}
+.css{width:90%;}
+.javascript{width:80%;}
+.node{width:70%;}
+
+#projects-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-card{
+    background: #1e293b;
+    width: 380px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.project-card:hover{
+    transform: translateY(-10px);
+}
+
+.project-img{
+    width:100%;
+    height:220px;
+    object-fit: contain;
+    background: #fff;
+}
+
+.project-card h3,
+.project-card p,
+.project-card a{
+    margin: 15px;
+}
+
+.project-card a{
+    display: inline-block;
+    background: #38bdf8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+
+.contact form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+.contact input,
+.contact textarea{
+    width:70%;
+    padding:12px;
+    margin:10px;
+    border-radius:8px;
+    border:none;
+}
+
+.contact textarea{
+    height:120px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1e293b;
+    
+}
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    nav{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    nav ul li{
+        margin: 10px 0;
+    }
+
+    .hero h1{
+        font-size: 32px;
+    }
+
+    .hero h3{
+        font-size: 20px;
+    }
+
+    .hero img{
+        width: 170px;
+        height: 170px;
+    }
+
+    .social a{
+        font-size: 25px;
+    }
+
+    .skill{
+        width: 100%;
+    }
+
+    .contact input,
+    .contact textarea{
+        width: 100%;
+    }
+
+    .project-card{
+        width: 100%;
+    }
+
+    section{
+        padding: 50px 20px;
+    }
+
+}
