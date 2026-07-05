@@ -47,6 +47,12 @@ app.get("/test-db", (req, res) => {
     });
 
 });
+app.get("/check-contacts", (req, res) => {
+    db.query("SHOW CREATE TABLE contacts", (err, result) => {
+        if (err) return res.json(err);
+        res.json(result);
+    });
+});
 
 // Save contact message
 app.post("/contact", (req, res) => {
